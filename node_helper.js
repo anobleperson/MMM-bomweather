@@ -13,7 +13,10 @@ module.exports = NodeHelper.create({
 	console.log("Fetch URL: " + payload);
 	const options = {host: "www.bom.gov.au",
 		hostname: "www.bom.gov.au",
-		headers: {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:83.0) Gecko/20100101 Firefox/83.0"} };
+		headers: {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:90.0) Gecko/20100101 Firefox/90.0",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        } };
 
         http.get(payload, options, (response) => {
             let data = '';
